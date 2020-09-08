@@ -1,9 +1,16 @@
 class ArmstrongNumbers {
 
     boolean isArmstrongNumber(int numberToCheck) {
+        if(String.valueOf(numberToCheck).length() == 1)
+            return true;
+         
+        String[] numberString = String.valueOf(numberToCheck).split("");
+        int accumulator = 0;
 
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
-
+        for(var number : numberString)
+            accumulator += Math.pow(Integer.valueOf(number), numberString.length);
+        
+        return accumulator == numberToCheck;
     }
 
 }
