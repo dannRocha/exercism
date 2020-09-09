@@ -4,13 +4,12 @@ class Acronym {
     
     Acronym(String phrase) {
         
-        String[] words = phrase.replaceAll("[-._]", " ").split(" ");
-
+        String[] words = phrase.toUpperCase().replaceAll("[-._]", " ").split(" ");
+        
         for(var word : words){
-            acronym += word.split("")[0];
+           if(!word.trim().isEmpty())
+               acronym += word.split("")[0];
         }
-
-        acronym	= acronym.toUpperCase();
     }
 
     String get() {
