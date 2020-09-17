@@ -21,13 +21,10 @@ public class Hamming{
 
     checkThereIsIllegalArgument(leftStrand, rightStrand);
                  
-    String[] leftStrandArray = leftStrand.split("");
-    String[] rightStrandArray = rightStrand.split("");
-
-    for(int i = 0; i < leftStrandArray.length; i++){
-        if(!leftStrandArray[i].equals(rightStrandArray[i])){
-            distance++;
-        }
+    for(int i = 0; i < leftStrand.length(); i++){
+      if(leftStrand.charAt(i) != rightStrand.charAt(i)){
+        distance++;
+      }
     }			 
   }
 
