@@ -1,19 +1,4 @@
 public class PangramChecker {
-  
-  private final static int LETTERS_IN_ALPHABET = 26;
-
-  public boolean isPangram(String input) {
-    return input.toLowerCase().chars()
-            .filter(Character::isAlphabetic)
-            .distinct()
-            .count() == LETTERS_IN_ALPHABET;
-  }
-}
-
-
-
-/*
-public class PangramChecker {
     
   private final int ALPHABET_SIZE = 26;
   private final int ASCII_A = 97;
@@ -43,7 +28,4 @@ public class PangramChecker {
 
     return alphabet;
   }
-
 }
-
-*/
